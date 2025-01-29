@@ -5,6 +5,10 @@
     --white: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -168,24 +172,24 @@ h4 {
     margin-bottom: 48px;
 }
 
-.about-games-box {
+.about-game {
     background-color: var(--dark);
     padding-top: 94px;
     position: relative;
 }
 
 
-.games-box__title {
+.about-game__title {
     margin-bottom: 24px;
     color: var(--white);
 }
 
-.games-box__text {
+.about-game__text {
     color: var(--white);
     margin-bottom: 72px;
 }
 
-.about-games__cards {
+.about-game__cards {
     padding-bottom: 50px;
     position: inherit;
 }
@@ -205,50 +209,50 @@ h4 {
     transform: scale(1.05);
 }
 
-.game__card-1 {
+.about-game__card-1 {
     grid-row: 1 / 2;
     height: 473px;
     width: 378px;;
 }
 
-.game__card-2 {
+.about-game__card-2 {
     grid-row: 1 / 3;
     height: 512px;
     width: 378px;;
 }
 
-.game__card-3 {
+.about-game__card-3 {
     grid-row: 1 / 2;
     height: 473px;
     width: 378px;;
 }
 
-.game__card-4 {
+.about-game__card-4 {
     grid-row: 2 / 4;
     height: 551px;
     width: 378px;;
 }
 
-.game__card-5 {
+.about-game__card-5 {
     grid-row: 3 / 4;
     height: 512px;
     width: 378px;;
 }
 
-.game__card-6 {
+.about-game__card-6 {
     grid-row: 2 / 4;
     height: 551px;
     width: 378px;;
 }
 
 
-.game-card__info {
+.card-info {
     padding-top: 32px;
     padding-left: 32px;
     padding-right: 32px;
 }
 
-.card__title {
+.number-game {
     display: flex;
     padding: 8px 16px 10px 16px;
     align-items: center;
@@ -258,7 +262,7 @@ h4 {
     margin-bottom: 16px;
 }
 
-.card__text {
+.title-game {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 32px;
