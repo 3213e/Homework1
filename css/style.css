@@ -194,6 +194,32 @@ h4 {
     margin-bottom: 48px;
 }
 
+.top__running-line {
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: var(--green);
+    display: flex;
+    gap: 51px;
+}
+
+.running-line__content {
+    display: flex;
+    white-space: nowrap;
+    gap: 51px;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+}
+
 .about {
     background-color: var(--dark);
     padding-top: 94px;
@@ -431,6 +457,18 @@ h4 {
         margin-bottom: 36px;
         text-align: center;
     }
+
+    .top__running-line {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .top__running-line img {
+        width: 19px;
+        height: 19px;
+    }
+
+
 
     .btn {
         width: 285px;
