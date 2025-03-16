@@ -1,56 +1,92 @@
-//задание 1
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
+// game-1
 
-//задание 2
-const year = 2007;
-alert(`Год выпуска первого iPhone - ${year}`);
+function guessNumber() {
 
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
 
-//задание 3
-const name = 'Brendon Eich';
-alert(`${name} - создатель языка JavaScript`);
+    let attempts = 0;
 
-//задание 4
-let b = 10;
-let c = 2;
-alert(b + c);
-alert(b - c);
-alert(b * c);
-alert(b / c);
+    alert('Добро пожаловать в игру "Угадай число"!');
+    alert('Попробуй угадать число от 1 до 100.');
 
-//задание 5
-let result = 2 ** 5;
-alert(result);
+    while (true) {
+        const guess = prompt('Введите ваше предположение:');
 
-//задание 6
-let d = 9;
-let e = 2;
-alert(d % e);
+        if (guess === null) {
+            alert('Вы отменили игру. До свидания!');
+            break;
+        }
 
-//задание 7
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num++;
-num--;
-alert(num);
+        if (isNaN(guess)) {
+            alert('Пожалуйста, введите целое число.');
+            continue;
+        }
 
-//задание 8
-let age = prompt("Сколько вам лет?");
-alert(age);
+        if (guess > 100) {
+            alert('Ваше число больше 100');
+            continue;
+        }
 
-//задание 9
-const user = {
-    name: 'Иван',
-    age: 23,
-    isAdmin: true
- }
- 
-//задание 10
-let userName = prompt("Как вас зовут?");
-alert(`Привет, ${userName}!`);
+        attempts++;
+
+        const userGuess = parseInt(guess);
+
+        if (userGuess < secretNumber) {
+            alert('Загаданное число больше.');
+        } else if (userGuess > secretNumber) {
+            alert('Загаданное число меньше.');
+        } else {
+            alert(`Поздравляю! Вы угадали число ${secretNumber} за ${attempts} попыток.`);
+            break;
+        }
+    }
+}
+
+//Простая Арифметика
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+   
+function getRandomOperator() {
+    const operators = ['+', '-', '*', '/'];
+    return operators[Math.floor(Math.random() * operators.length)];
+}
+   
+function solveExpression(num1, operator, num2) {
+    switch(operator) {
+    case '+':
+    return num1 + num2;
+    case '-':
+    return num1 - num2;
+    case '*':
+    return num1 * num2;
+    case '/':
+    return num1 / num2;
+    default:
+    return null;
+    }
+}
+   
+function mathGame() {
+   
+    const num1 = getRandomNumber(1, 10);
+    const num2 = getRandomNumber(1, 10);
+    const operator = getRandomOperator();
+    
+    const expression = `${num1} ${operator} ${num2}`;
+    
+    const userAnswer = prompt(`Решите задачу: ${expression}`);
+    
+    if (isNaN(userAnswer)) {
+        alert('Пожалуйста, введите число!');
+        return;
+    }
+    
+    const correctAnswer = solveExpression(num1, operator, num2);
+    
+    if (parseFloat(userAnswer) === correctAnswer) {
+    alert('Правильно!');
+    } else {
+    alert(`Неверно! Правильный ответ: ${correctAnswer}`);
+    }
+}
