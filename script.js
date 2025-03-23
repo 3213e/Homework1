@@ -156,3 +156,38 @@ alert(`Викторина завершена!\nВы набрали ${score} из
 
 score = 0;
 };
+
+//5 игра 
+function rockPaperScissors() {
+
+    const userChoice = prompt("Выберите: камень, ножницы или бумага");
+
+    const choices = ["камень", "ножницы", "бумага"];
+
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+    let result;
+
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Компьютер победил!";
+    }
+
+
+    alert(`Ваш выбор: ${userChoice}`);
+    alert(`Выбор компьютера: ${computerChoice}`);
+    alert(result);
+
+    return {
+        userChoice,
+        computerChoice,
+        result
+    };
+}
