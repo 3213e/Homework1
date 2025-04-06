@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание для фронтенд-разработчика</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            margin: 10px 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .description {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .task {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тестовое задание для фронтенд-разработчика</h1>
+
+    <!-- Задание 1 -->
+    <div class="task" id="task1">
+        <h2>Задание 1: Скрытие и показ текста</h2>
+        <h1 id="toggleHeading">Этот текст можно скрыть/показать</h1>
+        <div class="button-group">
+            <button id="toggleButton">Скрыть</button>
+            <button id="resetToggleButton" disabled>Отменить</button>
+        </div>
+    </div>
+
+    <!-- Задание 2 -->
+    <div class="task" id="task2">
+        <h2>Задание 2: Изменение стиля элемента</h2>
+        <p id="colorParagraph">Этот текст изменит цвет при нажатии на кнопку</p>
+        <div class="button-group">
+            <button id="colorButton">Изменить цвет</button>
+            <button id="resetColorButton" disabled>Отменить</button>
+        </div>
+    </div>
+
+    <!-- Задание 3 -->
+    <div class="task" id="task3">
+        <h2>Задание 3: Динамическое изменение текста</h2>
+        <h1 id="changeTextHeading">Исходный текст заголовка</h1>
+        <div class="button-group">
+            <button id="changeTextButton">Изменить текст</button>
+            <button id="resetTextButton" disabled>Отменить</button>
+        </div>
+    </div>
+
+    <!-- Задание 4 -->
+    <div class="task" id="task4">
+        <h2>Задание 4: Поиск и изменение элементов по классу</h2>
+        <p class="description">Первый элемент с классом description</p>
+        <p class="description">Второй элемент с классом description</p>
+        <p>Обычный элемент без класса</p>
+        <p class="description">Третий элемент с классом description</p>
+        <div class="button-group">
+            <button id="changeDescriptionsButton">Изменить тексты description</button>
+            <button id="resetDescriptionsButton" disabled>Отменить</button>
+        </div>
+    </div>
+
+    <!-- Задание 5 -->
+    <div class="task" id="task5">
+        <h2>Задание 5: Работа с querySelectorAll</h2>
+        <p class="description">Первый абзац с классом description</p>
+        <p class="other">Абзац с другим классом</p>
+        <p class="description">Второй абзац с классом description</p>
+        <p>Абзац без класса</p>
+        <div class="button-group">
+            <button id="changeAllDescriptionsButton">Изменить все description</button>
+            <button id="resetAllDescriptionsButton" disabled>Отменить</button>
+        </div>
+    </div>
+
+    <!-- Задание 6 -->
+    <div class="task" id="task6">
+        <h2>Задание 6: Добавление нового элемента в DOM</h2>
+        <div class="button-group">
+            <button id="addElementButton">Добавить элемент</button>
+            <button id="removeLastElementButton" disabled>Удалить последний</button>
+        </div>
+        <div id="newElementsContainer"></div>
+    </div>
+
+    <!-- Задание 7 -->
+    <div class="task" id="task7">
+        <h2>Задание 7: Удаление элемента</h2>
+        <div id="elementsToRemoveContainer">
+            <p class="description">Первый абзац с классом description (будет удален)</p>
+            <p class="description">Второй абзац с классом description</p>
+            <p>Абзац без класса (не будет удален)</p>
+        </div>
+        <div class="button-group">
+            <button id="removeElementButton">Удалить первый description</button>
+            <button id="restoreElementButton" disabled>Восстановить</button>
+        </div>
+    </div>
+
+    <script src="jsDOM.js"></script>
+</body>
+</html>
